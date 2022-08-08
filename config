@@ -5,9 +5,9 @@
        # short
        c  = commit
        co = checkout
-       coo= checkout origin/master
+       coo= checkout origin/HEAD
        sw = switch
-       swo= switch -d origin/master
+       swo= switch -d origin/HEAD
 
        # alias
        cancel = reset --soft HEAD^
