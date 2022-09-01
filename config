@@ -1,6 +1,7 @@
 [user]
 	name = Y.Nishimura
 	email = officel@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOst8/Mo2OcFQRvi94lNe8pjMxOUh4BiW+NO60+ez0cG
 [alias]
        # short
        c  = commit
@@ -38,6 +39,7 @@
 [advice]
 	detachedHead = false
 [commit]
+	gpgsign = true
 	# template = /home/raki/.dotfiles/git_commit_conventions.txt
 [log]
 	follow = true
@@ -47,3 +49,7 @@
 	lineNumber = true
 [diff]
 	compactionHeuristic = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /home/raki/.config/git/allowed_signers
