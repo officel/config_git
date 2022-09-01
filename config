@@ -1,6 +1,7 @@
 [user]
 	name = Y.Nishimura
 	email = officel@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOst8/Mo2OcFQRvi94lNe8pjMxOUh4BiW+NO60+ez0cG
 [alias]
        # short
        c  = commit
@@ -47,3 +48,5 @@
 	lineNumber = true
 [diff]
 	compactionHeuristic = true
+[gpg]
+	format = ssh
