@@ -51,3 +51,5 @@
 	compactionHeuristic = true
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /home/raki/.config/git/allowed_signers
