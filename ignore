@@ -7,3 +7,6 @@ terraform.tfstate
 terraform.tfstate.backup
 *.swp
 
+# ansible-vault password file in repo
+.vault_password
+
