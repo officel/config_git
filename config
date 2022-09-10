@@ -3,22 +3,22 @@
 	email = officel@users.noreply.github.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOst8/Mo2OcFQRvi94lNe8pjMxOUh4BiW+NO60+ez0cG
 [alias]
-       # short
-       c  = commit
-       co = checkout
-       coo= checkout origin/HEAD
-       sw = switch
-       swo= switch -d origin/HEAD
+	# short
+	c  = commit
+	co = checkout
+	coo= checkout origin/HEAD
+	sw = switch
+	swo= switch -d origin/HEAD
 
-       # alias
-       cancel = reset --soft HEAD^
-       save   = stash save
-       load   = stash pop
-       pr     = "!git push origin HEAD:refs/heads/$1 #"
+	# alias
+	cancel = reset --soft HEAD^
+	save   = stash save
+	load   = stash pop
+	pr     = "!git push origin HEAD:refs/heads/$1 #"
 
-       # options
-       alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
-       plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%t%Y/%m/%d %H:%M'  --all --graph
+	# options
+	alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+	plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%t%Y/%m/%d %H:%M'  --all --graph
 
 [core]
 	# editor = vim +15 +startinsert
@@ -26,8 +26,9 @@
 	autocrlf = false
 	filemode = false
 	# excludesfile = ~/.gitignore_global
-        quotepath  = false
-        ignorecase = false
+	quotepath  = false
+	ignorecase = false
+	commentchar = ";"
 
 [fetch]
 	prune = true
