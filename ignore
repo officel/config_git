@@ -10,3 +10,6 @@ terraform.tfstate.backup
 # ansible-vault password file in repo
 .vault_password
 
+# for act(github actions localy)
+.act.secrets
+.act.env
