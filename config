@@ -18,7 +18,7 @@
 
 	# options
 	alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
-	plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%t%Y/%m/%d %H:%M'  --all --graph
+	plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format-local:'%t%Y/%m/%d %H:%M'  --all --graph
 
 [core]
 	# editor = vim +15 +startinsert
