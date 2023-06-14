@@ -53,6 +53,7 @@
 	lineNumber = true
 [diff]
 	compactionHeuristic = true
+	wsErrorHighlight = all
 [gpg]
 	format = ssh
 [gpg "ssh"]
