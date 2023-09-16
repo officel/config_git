@@ -9,6 +9,7 @@ terraform.tfstate.backup
 
 # temporary file
 *.nogit
+*.nogit.md
 
 # ansible-vault password file in repo
 .vault_password
