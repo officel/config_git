@@ -22,6 +22,7 @@
 
 	deleted = log --diff-filter=D --summary
 	restoring = !git checkout $(git rev-list -n 1 HEAD -- "${1:-none}")~1 --
+	chash = rev-parse --short HEAD
 
 [core]
 	# editor = vim +15 +startinsert
