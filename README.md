@@ -29,3 +29,11 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 - [officel/config_aqua: .config/aqua](https://github.com/officel/config_aqua)
 - [officel/config_bash: .config/bash](https://github.com/officel/config_bash)
 - [officel/config_git: .config/git](https://github.com/officel/config_git)
+
+# note
+
+## ローカルリポジトリだけ ignore
+
+- チームでは ignore しないが、個人では ignore したい
+- 個人の共通設定（このリポジトリの ignore のように）では ignore しないが、特定のリポジトリでは ignore したい
+- （リポジトリの）`.git/info/exclude` に追加
