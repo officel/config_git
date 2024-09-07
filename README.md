@@ -19,10 +19,11 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 
 ## see
 
-- https://git-scm.com/docs/git-config
-- https://github.com/github/gitignore
-- https://www.conventionalcommits.org/
-- https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+- [Git - git-config Documentation](https://git-scm.com/docs/git-config)
+- [GitAlias/gitalias: Git alias commands for faster easier version control](https://github.com/GitAlias/gitalias)
+- [github/gitignore: A collection of useful .gitignore templates](https://github.com/github/gitignore)
+- [Conventional Commits](https://www.conventionalcommits.org/)
+- [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/)
 
 # related my projects
 
