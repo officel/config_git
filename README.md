@@ -38,3 +38,8 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 - チームでは ignore しないが、個人では ignore したい
 - 個人の共通設定（このリポジトリの ignore のように）では ignore しないが、特定のリポジトリでは ignore したい
 - （リポジトリの）`.git/info/exclude` に追加
+
+## config がどこで設定されているか
+
+- Windows ユーザの同僚氏のグローバルなgitの設定の場所がぱっとわからなかった
+- `git config --show-origin --show-scope --list`
