@@ -6,6 +6,7 @@
 	# short
 	c  = commit
 	co = checkout
+	cob= checkout HEAD@{1}
 	coo= checkout origin/HEAD
 	sw = switch
 	swo= switch -d origin/HEAD
