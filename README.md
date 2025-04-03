@@ -43,3 +43,11 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 
 - Windows ユーザの同僚氏のグローバルなgitの設定の場所がぱっとわからなかった
 - `git config --show-origin --show-scope --list`
+
+## global の config
+
+- [Git - Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+- `~/.gitconfig` か `~/.config/git/config`
+
+> The next place Git looks is the ~/.gitconfig (or ~/.config/git/config) file, which is specific to each user.
+> You can make Git read and write to this file by passing the --global option.
