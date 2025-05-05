@@ -51,3 +51,14 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 
 > The next place Git looks is the ~/.gitconfig (or ~/.config/git/config) file, which is specific to each user.
 > You can make Git read and write to this file by passing the --global option.
+
+## commit 時に自動改行させない
+
+- git のコミット本文は 72 文字でデフォルトで自動改行される
+- `textwidth=0` にすればいいらしいので、`/.vimrc` で設定
+- あまり長いのは推奨されないので適度に自分で改行すること
+
+```text
+# ~/.vimrc
+autocmd FileType gitcommit setlocal textwidth=0
+```
