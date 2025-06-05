@@ -1,10 +1,6 @@
 .DS_Store
 .env
 .envrc
-.terraform/
-.terraformrc
-terraform.tfstate
-terraform.tfstate.backup
 *.swp
 
 # temporary file
@@ -18,3 +14,10 @@ __*
 # for act(github actions localy)
 .act.secrets
 .act.env
+
+# terraform
+.terraform/
+.terraformrc
+terraform.tfstate
+terraform.tfstate.backup
+z.tfstate
