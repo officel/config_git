@@ -30,6 +30,7 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 - [officel/config_aqua: .config/aqua](https://github.com/officel/config_aqua)
 - [officel/config_bash: .config/bash](https://github.com/officel/config_bash)
 - [officel/config_git: .config/git](https://github.com/officel/config_git)
+- [officel/config_task: .config/task](https://github.com/officel/config_task)
 
 # note
 
@@ -41,7 +42,7 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 
 ## config がどこで設定されているか
 
-- Windows ユーザの同僚氏のグローバルなgitの設定の場所がぱっとわからなかった
+- Windows ユーザの同僚氏のグローバルな git の設定の場所がぱっとわからなかった
 - `git config --show-origin --show-scope --list`
 
 ## global の config
