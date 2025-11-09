@@ -1,13 +1,24 @@
 [user]
 	name = NISHIMURA Yoshitaka
 	email = officel@users.noreply.github.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOst8/Mo2OcFQRvi94lNe8pjMxOUh4BiW+NO60+ez0cG
+	signingKey = ~/.ssh/id_ed25519.pub
+
+[commit]
+	gpgSign = true
+	# template = ~/.config/git/git_commit_conventions.txt
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+
+[advice]
+	detachedHead = false
+
 [alias]
 	# short
-	c  = commit
 	co = checkout
-	cob= checkout HEAD@{1}
-	coo= checkout origin/HEAD
 	sw = switch
 	swo= switch -d origin/HEAD
 
@@ -16,8 +27,11 @@
 	save   = stash save
 	load   = stash pop
 	pr     = "!git push origin HEAD:refs/heads/$1 #"
+  uns    = restore --staged
 	unt    = ls-files --others --exclude-standard
 	ign    = ls-files --others --exclude-standard --ignored
+  recent = branch --sort=-committerdate --format='%(committerdate:relative)%09%(refname:short)'
+  last   = log -1 HEAD --stat
 
 	# options
 	alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
@@ -28,37 +42,47 @@
 	chash = rev-parse --short HEAD
 
 [core]
-	# editor = vim +15 +startinsert
-	editor = vim +startinsert
 	autocrlf = false
-	filemode = false
-	# excludesfile = ~/.gitignore_global
-	quotepath  = false
-	ignorecase = false
-	commentchar = ";"
+	commentChar = ";"
+	editor = vim +startinsert
+	fileMode = false
+	ignoreCase = false
+	quotePath  = false
 
-[fetch]
-	prune = true
-[help]
-	autocorrect = 1
-[push]
-	default = current
-
-[advice]
-	detachedHead = false
-[commit]
-	gpgsign = true
-	# template = /home/raki/.dotfiles/git_commit_conventions.txt
-[log]
-	follow = true
-[init]
-	defaultBranch = main
-[grep]
-	lineNumber = true
 [diff]
 	compactionHeuristic = true
 	wsErrorHighlight = all
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	allowedSignersFile = /home/raki/.config/git/allowed_signers
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[grep]
+	lineNumber = true
+
+[help]
+	autoCorrect = 1
+
+[init]
+	defaultBranch = main
+
+[log]
+	follow = true
+
+[push]
+	default = current
+
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+
+[rerere]
+  enabled = true
+
+[credential "https://github.com"]
+  helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+  helper =
+	helper = !gh auth git-credential
