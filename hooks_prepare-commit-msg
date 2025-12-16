@@ -1,0 +1,35 @@
+#!/bin/sh
+
+set -eu
+
+MSG_FILE="$1"
+COMMIT_SOURCE="${2:-}"
+
+# merge / squash / amend は除外
+case "$COMMIT_SOURCE" in
+  merge|squash|commit)
+    exit 0
+    ;;
+esac
+
+# comment char を Git 設定から取得（未設定時は #）
+COMMENT_CHAR="$(git config --get core.commentchar || echo '#')"
+MARKER="${COMMENT_CHAR} ---- Recent commits ----"
+
+# すでに挿入済みなら何もしない
+if grep -q "^$(printf '%s' "$MARKER" | sed 's/[]\/$*.^[]/\\&/g')" "$MSG_FILE"; then
+  exit 0
+fi
+
+TMP_FILE="$(mktemp)"
+
+{
+  echo ""
+  echo "$MARKER"
+  git log -n 5 --oneline | sed "s/^/${COMMENT_CHAR} /"
+  echo "$COMMENT_CHAR"
+  cat "$MSG_FILE"
+} > "$TMP_FILE"
+
+mv "$TMP_FILE" "$MSG_FILE"
+
