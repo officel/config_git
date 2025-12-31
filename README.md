@@ -1,5 +1,8 @@
 # config_git
 
+>[!IMPORTANT]
+> dotfiles の式年遷宮に伴い移動しました。[移動先はこちら](https://github.com/officel/dotfiles/)
+
 my git config on $XDG_CONFIG_HOME/git/
 
 ## usage
